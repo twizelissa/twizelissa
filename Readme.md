@@ -12,7 +12,7 @@ I'm Elissa Twizeyimana Flutter Developer. I Spend most of time coding outstandin
 
 #### Busness
 
-- :paperclip: [My Resume/CV](https://github.com/ipenywis/ipenywis/blob/master/resumes/resume%20v1.0.pdf)
+- :paperclip: [My Resume/CV](https://github.com/twizelissa/twizelissa/blob/master/resumes/resume%20v1.0.pdf)
 - :email: twizelissa@gmail.com
 
 #### Profile Visits
