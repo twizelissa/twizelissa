@@ -1,6 +1,5 @@
 <h1 align="left">Hi 👋, I'm Twizeyimana Elissa</h1>
 <h3 align="left">A passionate full stack Web and Mobile developer from Rwanda</h3>
-<p>&nbsp;<img align="center" src="coder-banner.jpg" width="1000" heigh="100">
 
 <p align="left"> <a href="https://twitter.com/twizeyimanaeli4" target="blank"><img src="https://img.shields.io/twitter/follow/twizeyimanaeli4?logo=twitter&style=for-the-badge" alt="twizeyimanaeli4" /></a> </p>
 
