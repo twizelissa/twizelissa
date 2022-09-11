@@ -1,5 +1,5 @@
-"*" [Blog](https://dev.to/twizelissa)
+*[Blog](https://dev.to/twizelissa)
 
-"*" [Tweets](https://twitter.com/TwizeyimanaEli4)
+* [Tweets](https://twitter.com/TwizeyimanaEli4)
 
-"*" [Instagram](https://www.instagram.com/twizelissa)
+* [Instagram](https://www.instagram.com/twizelissa)
