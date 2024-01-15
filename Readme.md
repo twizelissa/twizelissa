@@ -18,9 +18,9 @@
 <p>
 
 - 🔭 I’m currently working on [](https://github.com/ngx-builders)
-- 🌱 I’m currently learning Typescript and Vuejs
-- 💬 Ask me about Vuejs
-- 📫 How to reach me: [@twizelissa](https://twitter.com/twizelissa)
+- 🌱 I’m currently learning Mobile Development using Kotlin
+- 💬 Ask me Any thing about programming
+- 📫 How to reach me: [@twizelissa](https://twitter.com/twizelissa) on twitter
 
 </p>
 
