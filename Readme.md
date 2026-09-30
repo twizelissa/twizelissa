@@ -17,10 +17,8 @@
 <br/>
 <p>
 
-- 🔭 I’m currently working on [](https://github.com/ngx-builders)
-- 🌱 I’m currently learning Mobile Development using Kotlin
-- 💬 Ask me Any thing about programming
-- 📫 How to reach me: [@twizelissa](https://twitter.com/twizelissa) on twitter
+- 🔭 I’m currently working on [Ikirezi](https://ikirezi.tech)
+- 📫 How to reach me through my Email: twizelissa@gmail.com
 
 </p>
 
@@ -30,11 +28,8 @@
 
 </p>
 
-# Blog posts
 
-<!-- BLOG-POST-LIST:START -->
 
-- [How to Enable github copilot for free to students](https://dev.to/twizelissa/how-to-enable-github-copilot-for-free-as-student-4kal)
-- [Understand synchronous Vs asynchronous code in Js](https://dev.to/twizelissa/understand-synchronous-vs-asynchronous-code-in-js-3pb6)
+
 
 <!-- BLOG-POST-LIST:END -->
