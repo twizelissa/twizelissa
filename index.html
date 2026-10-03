@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Elissa Twizeyimana: software engineer and founder of Domari, building AI products and AI training data from Kigali, Rwanda.">
+<meta property="og:title" content="Elissa Twizeyimana">
+<meta property="og:description" content="Software engineer and founder of Domari, building AI products from Kigali, Rwanda.">
+<meta property="og:image" content="assets/elissa.webp">
+<title>Elissa Twizeyimana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one editorial column (max 1080px). Split hero with a sun-disc portrait, then sections with a mono label rail on wide screens. */
+:root {
+  --bg: #F4F6F0;
+  --surface: #FBFCF8;
+  --ink: #13201A;
+  --muted: #56635B;
+  --line: #D9DFD4;
+  --chip: #E7ECE2;
+  --accent: #0A6A93;
+  --sun: #F2C200;
+  --on-sun: #13201A;
+  --live: #2E9E5B;
+  --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D1511; --surface: #131E18; --ink: #E7ECE4; --muted: #9EABA3;
+    --line: #26332B; --chip: #1A2720; --accent: #62C4EE; --sun: #F2C200; --on-sun: #13201A; --live: #4CC27D;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0D1511; --surface: #131E18; --ink: #E7ECE4; --muted: #9EABA3;
+  --line: #26332B; --chip: #1A2720; --accent: #62C4EE; --sun: #F2C200; --on-sun: #13201A; --live: #4CC27D;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+  padding-inline: clamp(16px, 4vw, 40px);
+  padding-block: 0;
+}
+.wrap { max-width: 1080px; margin-inline: auto; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; color: var(--ink); }
+p { margin: 0; }
+.mono { font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.02em; }
+.label { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+/* Header */
+.top {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;
+  padding-block: 22px; border-bottom: 1px solid var(--line);
+}
+.mark { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+.top nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.top nav a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+.top nav a:hover { color: var(--ink); }
+
+/* Hero */
+.hero {
+  display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+  gap: clamp(28px, 5vw, 64px); align-items: center; padding-block: clamp(40px, 7vw, 88px);
+}
+.hero-text { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.hero h1 { font-size: clamp(2.4rem, 5.6vw, 4.4rem); line-height: 1.02; font-weight: 750; letter-spacing: -0.025em; }
+.hero mark { background: var(--sun); color: var(--on-sun); padding: 0 0.12em; border-radius: 0.12em; }
+.lead { font-size: 1.15rem; color: var(--muted); max-width: 58ch; }
+.lead strong { color: var(--ink); font-weight: 600; }
+.coords { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px;
+  font-weight: 600; font-size: 0.98rem; text-decoration: none; border: 1.5px solid var(--ink);
+  font-family: var(--font-body); cursor: pointer; line-height: 1.2;
+}
+.btn-solid { background: var(--ink); color: var(--bg); }
+.btn-ghost { background: transparent; color: var(--ink); }
+.btn:hover { transform: translateY(-1px); }
+
+.portrait { position: relative; width: 100%; max-width: 360px; aspect-ratio: 1; justify-self: end; }
+.portrait::before {
+  content: ""; position: absolute; inset: 9% 3% 0 3%; border-radius: 50%; background: var(--sun);
+}
+.portrait img { position: relative; display: block; width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
+
+/* Sections */
+section.block {
+  display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 20px 40px;
+  padding-block: clamp(40px, 6vw, 72px); border-top: 1px solid var(--line);
+}
+.block > .label { padding-top: 10px; }
+.block-body { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+.block h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
+
+/* Now: Domari */
+.now { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+.now p { max-width: 62ch; }
+.facts { display: grid; gap: 0; margin: 0; border-top: 1px solid var(--line); }
+.facts div { display: flex; justify-content: space-between; gap: 16px; padding-block: 12px; border-bottom: 1px solid var(--line); }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; font-weight: 600; text-align: right; }
+
+/* Work */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font: 500 0.9rem var(--font-body); padding: 8px 16px; border-radius: 999px; cursor: pointer;
+  background: var(--chip); color: var(--ink); border: 1px solid transparent;
+}
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.project {
+  display: flex; flex-direction: column; gap: 14px; padding: 24px; min-width: 0;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+}
+.project-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.project h3 { font-size: 1.45rem; font-weight: 700; letter-spacing: -0.01em; }
+.status { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); white-space: nowrap; }
+.status.live::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--live); margin-right: 6px; vertical-align: 1px; }
+.project p { color: var(--muted); }
+.project .note { color: var(--ink); font-size: 0.92rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0; }
+.tags li { font-family: var(--font-mono); font-size: 0.76rem; padding: 3px 9px; border-radius: 6px; background: var(--chip); color: var(--ink); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: auto; padding-top: 4px; }
+.links a { font-weight: 600; font-size: 0.93rem; overflow-wrap: anywhere; }
+.links a.repo { font-family: var(--font-mono); font-weight: 500; font-size: 0.82rem; }
+
+.research { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.research a {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding-block: 14px;
+  border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none;
+}
+.research a:hover strong { text-decoration: underline; text-underline-offset: 3px; }
+.research span { color: var(--muted); }
+
+/* Experience */
+.timeline { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 6px 28px; padding-block: 18px; border-bottom: 1px solid var(--line); }
+.row .when { color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 3px; }
+.row h3 { font-size: 1.15rem; font-weight: 700; }
+.row .org { color: var(--muted); }
+.row p.detail { margin-top: 4px; }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.skills h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
+
+/* Contact */
+.contact h2 { font-size: clamp(2rem, 4.6vw, 3.2rem); }
+.email-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.email { font-family: var(--font-mono); font-size: clamp(1rem, 2.6vw, 1.3rem); padding: 10px 16px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); user-select: all; overflow-wrap: anywhere; }
+.socials { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.copied { color: var(--muted); font-size: 0.9rem; min-height: 1.4em; }
+
+footer { padding-block: 28px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+
+@media (max-width: 860px) {
+  .now, .skills { grid-template-columns: minmax(0, 1fr); }
+  section.block { grid-template-columns: minmax(0, 1fr); }
+  .block > .label { padding-top: 0; }
+}
+@media (max-width: 720px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .portrait { justify-self: start; max-width: 240px; order: -1; }
+  .projects { grid-template-columns: minmax(0, 1fr); }
+  .row { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn, .chip { transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#top">Elissa Twizeyimana</a>
+    <nav aria-label="Sections">
+      <a href="#now">Domari</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-text">
+        <p class="label">Software engineer · Founder</p>
+        <h1>I build AI products and run a data company from <mark>Kigali</mark>.</h1>
+        <p class="lead">I'm <strong>Elissa Twizeyimana</strong>, CEO and technical lead of Domari. I ship full-stack and machine-learning products, from scam detection to Kinyarwanda voice translation.</p>
+        <p class="coords mono"><span>1.94° S, 30.06° E</span><span>UTC+2</span><span>Kinyarwanda · English · French · Swahili</span></p>
+        <div class="actions">
+          <a class="btn btn-solid" href="#work">See my work</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="portrait">
+        <img src="assets/elissa.webp" alt="Portrait of Elissa Twizeyimana" width="720" height="720">
+      </div>
+    </section>
+
+    <section class="block" id="now" aria-labelledby="now-title">
+      <p class="label">Now</p>
+      <div class="block-body">
+        <h2 id="now-title">Domari Ltd</h2>
+        <div class="now">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <p>Domari collects and annotates real-world data for international AI companies: speech, video, human motion and labeled images. We recruit and train young Rwandans to do the work, with Harambee as our talent partner.</p>
+            <p>I lead sales, client relationships and technology. Our scam detector, FraudShield, earned Domari a place in the UNIPOD Meta AI program.</p>
+            <p><a href="https://www.domari.rw/">Visit domari.rw</a></p>
+          </div>
+          <dl class="facts">
+            <div><dt>Role</dt><dd>CEO &amp; Technical Lead</dd></div>
+            <div><dt>Since</dt><dd>November 2025</dd></div>
+            <div><dt>Based in</dt><dd>Kigali, Rwanda</dd></div>
+            <div><dt>Focus</dt><dd>AI training data</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="work" aria-labelledby="work-title">
+      <p class="label">Selected work</p>
+      <div class="block-body">
+        <h2 id="work-title">Things I've built</h2>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="chip" type="button" id="filter-all" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" id="filter-ai" data-filter="ai" aria-pressed="false">AI &amp; ML</button>
+          <button class="chip" type="button" id="filter-product" data-filter="product" aria-pressed="false">Products</button>
+        </div>
+
+        <div class="projects" id="projects">
+          <article class="project" data-kind="ai product">
+            <div class="project-head"><h3>FraudShield AI</h3><span class="status live">Live</span></div>
+            <p>Paste a suspicious message and get a scam risk score, the warning signs and what to do next. AI analysis is checked against web search results.</p>
+            <p class="note">Got Domari selected for the UNIPOD Meta AI program.</p>
+            <ul class="tags"><li>Next.js</li><li>Gemini API</li><li>Web search</li></ul>
+            <div class="links"><a href="https://fraudshield-two.vercel.app/">Open the app</a><a class="repo" href="https://github.com/twizelissa/Fraudshield-AI">twizelissa/Fraudshield-AI</a></div>
+          </article>
+
+          <article class="project" data-kind="product">
+            <div class="project-head"><h3>Ikirezi</h3><span class="status live">Live</span></div>
+            <p>A private health platform for young Rwandans: cycle tracking, the Shangazi AI assistant, expert answers and an anonymous community, in English and Kinyarwanda.</p>
+            <p class="note">Founded by Uwingabire Caline. I contribute part-time.</p>
+            <ul class="tags"><li>Next.js</li><li>Bilingual</li><li>Health</li></ul>
+            <div class="links"><a href="https://ikirezi-app.vercel.app/">Visit the site</a></div>
+          </article>
+
+          <article class="project" data-kind="ai product">
+            <div class="project-head"><h3>Isandi</h3><span class="status">In development</span></div>
+            <p>Speak English, hear Kinyarwanda. A voice translator web app that helps visitors talk with moto drivers and market sellers in Kigali.</p>
+            <ul class="tags"><li>PWA</li><li>Speech</li><li>Translation</li></ul>
+            <div class="links"><span class="mono" style="color:var(--muted)">Private repository</span></div>
+          </article>
+
+          <article class="project" data-kind="ai product">
+            <div class="project-head"><h3>Inzira</h3><span class="status live">Live</span></div>
+            <p>A machine-learning tourism recommender for Rwanda that matches a traveler's interests to places and suggests what is nearby.</p>
+            <ul class="tags"><li>Next.js</li><li>Python</li><li>Streamlit</li><li>Recommender</li></ul>
+            <div class="links"><a href="https://inzira-cdr7.onrender.com/">Open the app</a><a class="repo" href="https://github.com/twizelissa/Inzira">twizelissa/Inzira</a></div>
+          </article>
+
+          <article class="project" data-kind="ai">
+            <div class="project-head"><h3>WhatsApp group memory bot</h3><span class="status">Hackathon</span></div>
+            <p>Built for the UniPods hackathon. It reads a WhatsApp group and its call recordings, answers questions with cited sources, and posts daily and weekly digests.</p>
+            <ul class="tags"><li>Whisper</li><li>Supabase pgvector</li><li>RAG</li><li>WhatsApp Cloud API</li></ul>
+            <div class="links"><a class="repo" href="https://github.com/twizelissa/Whatsappbot">twizelissa/Whatsappbot</a></div>
+          </article>
+
+          <article class="project" data-kind="ai">
+            <div class="project-head"><h3>FinSight</h3><span class="status live">Live demo</span></div>
+            <p>A finance assistant made by fine-tuning TinyLlama 1.1B with QLoRA on finance instructions, served through a Gradio chat interface.</p>
+            <ul class="tags"><li>QLoRA</li><li>TinyLlama</li><li>Gradio</li><li>Hugging Face</li></ul>
+            <div class="links"><a href="https://huggingface.co/spaces/twizelissa/twizelissa">Try the demo</a><a class="repo" href="https://github.com/twizelissa/finsight_adapter">twizelissa/finsight_adapter</a></div>
+          </article>
+
+          <article class="project" data-kind="ai">
+            <div class="project-head"><h3>Cats vs dogs MLOps pipeline</h3><span class="status live">Live</span></div>
+            <p>An end-to-end ML pipeline: VGG16 transfer learning at 92.3% test accuracy, bulk retraining, monitoring and load testing.</p>
+            <ul class="tags"><li>FastAPI</li><li>Docker</li><li>Next.js</li><li>VGG16</li></ul>
+            <div class="links"><a href="https://catdog-ml-api.onrender.com">Open the app</a><a class="repo" href="https://github.com/twizelissa/cat-dog-mlops-pipeline">twizelissa/cat-dog-mlops-pipeline</a></div>
+          </article>
+
+          <article class="project" data-kind="product">
+            <div class="project-head"><h3>KigaliPriceCheck</h3><span class="status">App design</span></div>
+            <p>A crowdsourced price comparison app for Rwandan markets, designed across 21 screens in Kinyarwanda, English and French.</p>
+            <ul class="tags"><li>Mobile</li><li>Crowdsourcing</li><li>Trilingual</li></ul>
+            <div class="links"><a class="repo" href="https://github.com/twizelissa/kigali-price-check-mobile">twizelissa/kigali-price-check-mobile</a></div>
+          </article>
+        </div>
+
+        <div class="research" aria-label="Machine learning projects">
+          <p class="label" style="padding-block:14px 6px">More machine learning</p>
+          <a href="https://github.com/twizelissa/beijing-air-quality-forecasting"><strong>Beijing PM2.5 forecasting</strong><span>LSTM time-series model</span></a>
+          <a href="https://github.com/twizelissa/Ant-Colony-Foraging-RL"><strong>Ant colony foraging</strong><span>Reinforcement learning: DQN, PPO, A2C, REINFORCE</span></a>
+          <a href="https://github.com/twizelissa/Malaria-Diagnosis-CNN-Transfer-Learning-"><strong>Malaria diagnosis</strong><span>CNN transfer learning</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="experience" aria-labelledby="exp-title">
+      <p class="label">Experience</p>
+      <div class="block-body">
+        <h2 id="exp-title">Where I've worked</h2>
+        <div class="timeline">
+          <div class="row"><p class="when mono">Nov 2025 – now</p><div><h3>CEO &amp; Technical Lead</h3><p class="org">Domari Ltd · Kigali</p><p class="detail">Data collection and annotation for international AI companies. I run sales, delivery and product.</p></div></div>
+          <div class="row"><p class="when mono">Sep 2026 – now</p><div><h3>Full-Stack &amp; Mobile Developer (internship)</h3><p class="org">Lajik Tech · via African Leadership Academy</p></div></div>
+          <div class="row"><p class="when mono">Sep 2023 – Sep 2026</p><div><h3>Full-Stack Developer</h3><p class="org">Ready to Bloom · Japan, remote</p><p class="detail">Full-time until November 2025, then part-time while building Domari.</p></div></div>
+          <div class="row"><p class="when mono">May – Sep 2023</p><div><h3>Full-Stack Developer</h3><p class="org">Elite-HYO-Group</p></div></div>
+          <div class="row"><p class="when mono">Feb – May 2023</p><div><h3>Full-Stack Developer</h3><p class="org">Andela</p></div></div>
+        </div>
+
+        <h2 style="font-size:clamp(1.4rem,2.6vw,1.8rem);padding-top:12px">Education and programs</h2>
+        <div class="timeline">
+          <div class="row"><p class="when mono">Expected 2027</p><div><h3>BSc Software Engineering</h3><p class="org">African Leadership University · GPA 4.1/5</p></div></div>
+          <div class="row"><p class="when mono">2026</p><div><h3>UNIPOD Meta AI program</h3><p class="org">Selected with FraudShield AI</p></div></div>
+          <div class="row"><p class="when mono">Graduated 2022</p><div><h3>Rwanda Coding Academy</h3><p class="org">Robotics, cybersecurity and embedded systems</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="skills" aria-labelledby="skills-title">
+      <p class="label">Skills</p>
+      <div class="block-body">
+        <h2 id="skills-title">What I work with</h2>
+        <div class="skills">
+          <div><h3>Product engineering</h3><ul class="tags"><li>Next.js</li><li>React</li><li>Node.js</li><li>TypeScript</li><li>Flutter</li><li>PWAs</li></ul></div>
+          <div><h3>AI and machine learning</h3><ul class="tags"><li>Python</li><li>LLM fine-tuning</li><li>RAG</li><li>Computer vision</li><li>Reinforcement learning</li><li>Whisper</li></ul></div>
+          <div><h3>Data and deployment</h3><ul class="tags"><li>Supabase</li><li>PostgreSQL</li><li>FastAPI</li><li>Docker</li><li>Vercel</li><li>Render</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block contact" id="contact" aria-labelledby="contact-title">
+      <p class="label">Contact</p>
+      <div class="block-body">
+        <h2 id="contact-title">Let's build something.</h2>
+        <p style="color:var(--muted);max-width:58ch">Open to engineering roles, AI projects and data partnerships. Email is the fastest way to reach me.</p>
+        <div class="email-row">
+          <span class="email" id="email">twizelissa@gmail.com</span>
+          <button class="btn btn-solid" type="button" id="copy-email">Copy email</button>
+        </div>
+        <p class="copied" id="copied" aria-live="polite"></p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/twizelissa/">LinkedIn</a>
+          <a href="https://github.com/twizelissa">GitHub</a>
+          <a href="https://twitter.com/twizelissa">X (Twitter)</a>
+          <a href="https://dev.to/twizelissa">DEV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Elissa Twizeyimana</span>
+    <span class="mono">Built in Kigali</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var chips = document.querySelectorAll('.chip');
+  var cards = document.querySelectorAll('.project');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var f = chip.getAttribute('data-filter');
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
+      cards.forEach(function (card) {
+        var kinds = (card.getAttribute('data-kind') || '').split(' ');
+        card.hidden = !(f === 'all' || kinds.indexOf(f) !== -1);
+      });
+    });
+  });
+
+  var btn = document.getElementById('copy-email');
+  var email = document.getElementById('email');
+  var note = document.getElementById('copied');
+  function selectEmail() {
+    try {
+      var range = document.createRange();
+      range.selectNodeContents(email);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    } catch (e) {}
+  }
+  btn.addEventListener('click', function () {
+    var text = email.textContent.trim();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        note.textContent = 'Copied to your clipboard.';
+      }, function () {
+        selectEmail();
+        note.textContent = 'Email selected. Press Ctrl+C or Cmd+C to copy.';
+      });
+    } else {
+      selectEmail();
+      note.textContent = 'Email selected. Press Ctrl+C or Cmd+C to copy.';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
